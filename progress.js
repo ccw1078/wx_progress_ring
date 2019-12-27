@@ -53,9 +53,6 @@ function update_rings(that) {
     let block = that.data.blocks[index];
     let current = item.current ? item.current : block.start;
     let x = 40, y = 40, r = 35, start = -0.5 * Math.PI;
-    item.setTextAlign("center");
-    item.setTextBaseline("middle");
-    item.setFontSize(16);
     if (current < block.end) {
       let percent = current / block.end;
       let num = (percent * 2 * Math.PI) + start;
@@ -66,15 +63,23 @@ function update_rings(that) {
       item.setLineCap("butt");
       item.stroke();
       item.beginPath();
+      item.setFontSize(16);
       item.setFillStyle("#f76260");
+      item.setTextAlign("center");
+      item.setTextBaseline("middle");
       item.fillText(current + "%", x, y);
+      item.draw();
     } else {
+      item.setFontSize(16);
       item.setFillStyle("#2BA245");
+      item.setTextAlign("center");
+      item.setTextBaseline("middle");
       item.fillText("100%", x, y);
+      item.draw();
+      return false;
     }
-    item.draw();
   });
-  setTimeout(() => {
+  setTimeout(()=> {
     update_rings(that)
   }, 1000);
 }
