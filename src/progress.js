@@ -40,10 +40,15 @@ Page({
 
   onLoad: function(options) {
     var that = this;
-    that.rings = that.data.blocks.map(item => {
-      return wx.createCanvasContext(item.name);
-    })
-    update_rings(that);
+    wx.createSelectorQuery().select('.ring').boundingClientRect(rect => {
+      console.log(rect);
+      that.canvas_width = parseInt(rect.width / 2);
+      that.canvas_height = parseInt(rect.height / 2);
+      that.rings = that.data.blocks.map((item) => {
+        return wx.createCanvasContext(item.name);
+      });
+      update_rings(that);
+    }).exec();
   }
 
 })
@@ -52,7 +57,8 @@ function update_rings(that) {
   that.rings.forEach((item, index) => {
     let block = that.data.blocks[index];
     let current = item.current ? item.current : block.start;
-    let x = 40, y = 40, r = 35, start = -0.5 * Math.PI;
+    let x = that.canvas_width, y = that.canvas_height;
+    let r = x - 5, start = -0.5 * Math.PI;
     item.setTextAlign("center");
     item.setTextBaseline("middle");
     item.setFontSize(16);
@@ -81,3 +87,4 @@ function update_rings(that) {
     }
   }, 1000);
 }
+
