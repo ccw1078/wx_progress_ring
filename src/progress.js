@@ -5,36 +5,12 @@ Page({
    * 页面的初始数据
    */
   data: {
-    blocks: [{
-        name: 'a',
-        speed: 2,
-        start: 0,
-        end: 100
-      },
-      {
-        name: 'b',
-        speed: 4,
-        start: 0,
-        end: 100
-      },
-      {
-        name: 'c',
-        speed: 6,
-        start: 0,
-        end: 100
-      },
-      {
-        name: 'd',
-        speed: 8,
-        start: 0,
-        end: 100
-      },
-      {
-        name: 'e',
-        speed: 10,
-        start: 0,
-        end: 100
-      },
+    blocks: [
+      {name: 'a', speed: 2, start: 0, end: 100},
+      {name: 'b', speed: 4, start: 0, end: 100},
+      {name: 'c', speed: 6, start: 0, end: 100},
+      {name: 'd', speed: 8, start: 0, end: 100},
+      {name: 'e', speed: 10, start: 0, end: 100}
     ]
   },
 
