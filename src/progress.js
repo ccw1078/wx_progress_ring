@@ -81,4 +81,3 @@ function update_rings(that) {
     }
   }, 1000);
 }
-
