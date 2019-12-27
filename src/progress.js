@@ -40,8 +40,8 @@ Page({
 
   onLoad: function(options) {
     var that = this;
-    that.rings = that.data.blocks.map((item, index) => {
-      return wx.createCanvasContext(index.toString());
+    that.rings = that.data.blocks.map(item => {
+      return wx.createCanvasContext(item.name);
     })
     update_rings(that);
   }

@@ -3,6 +3,6 @@
   <view wx:for="{{blocks}}" wx:key="index" class="block">
     <view class="bigCircle"></view>
     <view class="littleCircle"></view>
-    <canvas canvas-id="{{index}}" class="ring"></canvas>
+    <canvas canvas-id="{{item.name}}" class="ring"></canvas>
   </view>
 </view>
