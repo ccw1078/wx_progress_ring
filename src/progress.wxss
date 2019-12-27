@@ -1,0 +1,56 @@
+/* pages/progress/progress.wxss */
+
+.grid {
+  display: flex;
+  padding: 16rpx;
+  flex-wrap: wrap;
+}
+
+.block {
+  width: 200rpx;
+  height: 200rpx;
+  margin: 16rpx;
+  background-color: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.bigCircle {
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto auto;
+  background-color: #ddd;
+}
+
+.littleCircle {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto auto;
+  background-color: #eee;
+}
+
+.ring {
+  width: 160rpx;
+  height: 160rpx;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto auto;
+  z-index: 9;
+}

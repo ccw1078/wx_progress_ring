@@ -1,0 +1,8 @@
+<!--pages/progress/progress.wxml-->
+<view class="grid">
+  <view wx:for="{{blocks}}" wx:key="index" class="block">
+    <view class="bigCircle"></view>
+    <view class="littleCircle"></view>
+    <canvas canvas-id="{{index}}" class="ring"></canvas>
+  </view>
+</view>
