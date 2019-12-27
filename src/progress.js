@@ -71,11 +71,14 @@ function update_rings(that) {
     } else {
       item.setFillStyle("#2BA245");
       item.fillText("100%", x, y);
+      item.finished = true;
     }
     item.draw();
   });
   setTimeout(() => {
-    update_rings(that)
+    if (!that.rings.every(item => item.finished == true)) {
+      update_rings(that)
+    }
   }, 1000);
 }
 
