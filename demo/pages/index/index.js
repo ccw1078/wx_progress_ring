@@ -14,8 +14,9 @@ Page({
     ]
   },
   next_page: function() {
+    let count = this.data.blocks.length;
     wx.navigateTo({
-      url: '../hello/hello',
+      url: '../hello/hello?count=' + count,
     });
   },
 
@@ -73,6 +74,7 @@ function update_rings(that) {
     }
   }, 1000);
 }
+
 
 
 function init_blocks(that){

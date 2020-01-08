@@ -1,2 +1,13 @@
 <!--pages/hello/hello.wxml-->
-<text>pages/hello/hello.wxml</text>
+<!-- 主容器 -->
+<view class="title">增加、减少进度环数量</view>
+<view class="stepper">
+	<!-- 减号 -->
+	<text class="{{minusStatus}}" bindtap="bindMinus">-</text>
+	<!-- 数值 -->
+	<input type="number" bindchange="bindManual" value="{{num}}" />
+	<!-- 加号 -->
+	<text class="normal" bindtap="bindPlus">+</text>
+</view>
+<button class="btn" type="primary" bindtap="submit">确定</button>
+<button class="btn" bindtap="next_page">取消</button>
