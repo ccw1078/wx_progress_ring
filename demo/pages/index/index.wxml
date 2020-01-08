@@ -6,3 +6,4 @@
     <canvas canvas-id="{{item.name}}" class="ring"></canvas>
   </view>
 </view>
+<button bindtap="next_page">下一页</button>

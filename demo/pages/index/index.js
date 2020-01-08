@@ -13,11 +13,20 @@ Page({
       { name: 'e', estimated: 100000, start: 0 }
     ]
   },
+  next_page: function() {
+    wx.navigateTo({
+      url: '../hello/hello',
+    });
+  },
 
-  onLoad: function (options) {
+  onLoad: function() {
     let that = this;
     init_blocks(that);
     console.log(Date.now());
+  },
+
+  onShow: function (options) {
+    let that = this;
     wx.createSelectorQuery().select('.ring').boundingClientRect(rect => {
       console.log(rect);
       that.canvas_width = parseInt(rect.width / 2);
