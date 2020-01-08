@@ -10,4 +10,4 @@
 	<text class="normal" bindtap="bindPlus">+</text>
 </view>
 <button class="btn" type="primary" bindtap="submit">确定</button>
-<button class="btn" bindtap="next_page">取消</button>
+<button class="btn" bindtap="cancel">取消</button>

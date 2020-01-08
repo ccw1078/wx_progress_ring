@@ -62,7 +62,11 @@ Page({
     wx.navigateBack({
       delta: 1
     });
-
+  },
+  cancel: function(){
+    wx.navigateBack({
+      delta: 1
+    });
   },
   onLoad: function(options) {
     this.setData({
