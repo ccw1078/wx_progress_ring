@@ -7,3 +7,10 @@
   </view>
 </view>
 <button  type="primary" bindtap="next_page">下一页</button>
+
+<!-- <view class="grid">
+  <view class="block" bindtap="add_img">
+    <image src="{{imgPath[0]}}" mode="aspectFit"></image>
+  </view>
+</view> -->
+

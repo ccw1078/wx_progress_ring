@@ -13,6 +13,26 @@ Page({
       { name: 'e', estimated: 100000, start: 0 }
     ]
   },
+  add_img: function () {
+    let that = this;
+    console.log("add img tap");
+    wx.chooseImage({
+      count: 2,
+      success: function (res) {
+        console.log("add_img res", res);
+        const tempFilePaths = res.tempFilePaths;
+        that.setData({
+          imgPath: tempFilePaths
+        });
+        console.log("tempFilePaths", tempFilePaths);
+      }
+    });
+    // wx.getSystemInfo({
+    //   success: (result) => {
+    //     console.log(result);
+    //   },
+    // })
+  },
   next_page: function() {
     let count = this.data.blocks.length;
     wx.navigateTo({
